@@ -715,7 +715,7 @@ function renderMain(){
 }
 
 function attachSpeakers(){
-  var lis = mainEl.querySelectorAll('li.u');
+  var lis = mainEl.querySelectorAll('li.u, .must li');
   for(var i=0;i<lis.length;i++){
     (function(li){
       if(li.querySelector('.spk')) return;
