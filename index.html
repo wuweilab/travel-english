@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f6f5f2">
+<title>旅游英语 · 柬埔寨 7 天口语手册</title>
+<style>
+:root{
+  --bg:#f6f5f2; --card:#fff; --ink:#1c1c1a; --ink2:#5d5d58; --ink3:#8d8d86;
+  --line:#e4e2dc; --line2:#d2cfc7; --green:#1D9E75; --green2:#0F6E56;
+  --red:#A32D2D; --amber:#BA7517;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);color:var(--ink);font-size:15px;line-height:1.6;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  padding-bottom:72px;
+}
+/* ---------- 顶部 ---------- */
+header.top{
+  position:sticky;top:0;z-index:50;background:rgba(246,245,242,.97);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);padding:9px 0 7px;
+}
+.trow{display:flex;align-items:center;gap:10px;padding:0 16px 7px}
+.tname{font-size:13px;font-weight:600;letter-spacing:-.01em}
+.tname span{color:var(--ink3);font-weight:400;margin-left:5px}
+.chip{
+  margin-left:auto;flex:0 0 auto;font-size:12px;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line2);background:#fff;color:var(--ink2);cursor:pointer;
+  font-family:inherit;transition:.15s;
+}
+.chip.on{background:#8a2f4d;border-color:#8a2f4d;color:#fff}
+.days{display:flex;gap:6px;overflow-x:auto;padding:0 16px 2px;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.d{
+  flex:0 0 auto;font-family:inherit;font-size:12.5px;padding:5px 12px;border-radius:999px;
+  border:1px solid var(--line2);background:#fff;color:var(--ink2);cursor:pointer;transition:.15s;
+}
+.d.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.d.todo{opacity:.55}
+/* ---------- 主体 ---------- */
+main{max-width:720px;margin:0 auto;padding:0 16px}
+.dhead{padding:22px 0 4px}
+.dkicker{font-size:11px;letter-spacing:.16em;color:var(--ink3);text-transform:uppercase}
+.dtitle{font-size:26px;line-height:1.3;margin:6px 0 4px;font-weight:600;letter-spacing:-.02em}
+.dsub{font-size:13px;color:var(--ink2);margin:0;line-height:1.7}
+.dstat{display:flex;gap:14px;font-size:12px;color:var(--ink3);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:9px 0;margin-top:12px}
+.dstat b{color:var(--ink);font-weight:600}
+/* ---------- 场景块 ---------- */
+.bh{display:flex;align-items:center;gap:9px;margin:26px 0 4px}
+.bh .tm{font-size:11.5px;font-weight:600;color:#fff;background:var(--ink);padding:2px 7px;border-radius:4px;letter-spacing:.02em}
+.bh .wh{font-size:13.5px;font-weight:600;letter-spacing:-.01em}
+.bh .l{flex:1;height:1px;background:var(--line)}
+.bnote{font-size:12px;color:var(--ink3);margin:6px 0 0;line-height:1.62}
+ul.list{list-style:none;margin:8px 0 0;padding:0}
+li.u{
+  position:relative;background:var(--card);border:1px solid var(--line);
+  border-left:3px solid var(--line2);border-radius:0 10px 10px 0;
+  padding:10px 14px;margin:7px 0;
+}
+li.u.iv{border-left-color:#d49aae;background:#fdfafb}
+.ue{font-size:15.5px;line-height:1.55;letter-spacing:-.005em;padding-right:38px}
+.ue b{font-weight:600;text-decoration:underline;text-decoration-color:var(--green);text-decoration-thickness:1.5px;text-underline-offset:3px}
+.ui{font-family:"Charis SIL","Doulos SIL","Gentium Plus","Times New Roman",serif;font-size:12.5px;color:var(--green2);margin-top:3px;letter-spacing:.01em}
+.uz{font-size:13px;color:var(--ink2);margin-top:4px;line-height:1.58}
+.tag{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:2px;font-weight:600;background:#e3f4ee;color:var(--green2)}
+.tag.iv{background:#f7e4ea;color:#8a2f4d}
+.spk{
+  position:absolute;right:8px;top:8px;width:28px;height:28px;border-radius:50%;
+  border:1px solid var(--line2);background:#fff;color:#9a9a92;display:flex;align-items:center;
+  justify-content:center;cursor:pointer;padding:0;transition:.15s;
+}
+.spk:hover{border-color:var(--green);color:var(--green2)}
+.spk.on{background:var(--green);border-color:var(--green);color:#fff}
+/* ---------- 提示条 ---------- */
+.note{border-left:3px solid var(--green);background:#f0f8f5;border-radius:0 10px 10px 0;padding:11px 14px;margin:10px 0;font-size:12.5px;color:#0b5344;line-height:1.64}
+.note.warn{border-left-color:var(--amber);background:#fdf6e9;color:#633806}
+.note b{font-weight:600}
+/* ---------- 空状态 ---------- */
+.empty{background:var(--card);border:1px dashed var(--line2);border-radius:12px;padding:26px 20px;margin:22px 0;text-align:center}
+.empty .e1{font-size:13.5px;font-weight:600;margin-bottom:6px}
+.empty .e2{font-size:12.5px;color:var(--ink3);line-height:1.7}
+/* ---------- 底部 ---------- */
+.pbar{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:14px;z-index:60;
+  display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.95);
+  border:1px solid var(--line);border-radius:999px;padding:5px 7px;
+  box-shadow:0 4px 16px rgba(0,0,0,.09);backdrop-filter:blur(8px);
+}
+.pb{font-family:inherit;font-size:12px;border:1px solid var(--line2);background:#fff;color:var(--ink2);border-radius:999px;padding:5px 12px;cursor:pointer;white-space:nowrap}
+.pb.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.pcount{font-size:11.5px;color:var(--ink3);padding-right:8px;white-space:nowrap}
+/* ---------- 今日必背 ---------- */
+.must{background:var(--card);border:1.5px solid var(--ink);border-radius:14px;padding:14px 16px 6px;margin:16px 0 6px}
+.must h3{margin:0 0 3px;font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:7px}
+.must h3 .mk{font-size:10px;letter-spacing:.12em;color:#fff;background:var(--ink);border-radius:4px;padding:2px 6px;font-weight:600}
+.must p.mp{margin:2px 0 8px;font-size:12px;color:var(--ink3);line-height:1.6}
+.must ol{list-style:none;margin:0;padding:0;counter-reset:m}
+.must li{counter-increment:m;position:relative;border-top:1px dashed var(--line);padding:9px 34px 9px 26px;margin:0}
+.must li:before{content:counter(m);position:absolute;left:0;top:11px;width:17px;height:17px;border-radius:50%;background:#f0efe9;color:var(--ink2);font-size:10.5px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.must .ue{font-size:15px}
+.must .uz{font-size:12px;color:var(--ink3);margin-top:2px}
+.must li .ui{display:none}
+.must li .spk{top:7px}
+.must .endnote{font-size:11.5px;color:var(--ink3);border-top:1px dashed var(--line);margin-top:2px;padding:8px 0 8px;line-height:1.6}
+/* ---------- 听力条目（对方说的） ---------- */
+li.u.hear{border-left-color:#9aa8b5;background:#f8f9fa}
+li.u.hear .tag{background:#eef0f2;color:#5d6b78}
+.note.kh{border-left-color:#534AB7;background:#f3f2fb;color:#332e73}
+/* ---------- 工具箱天 ---------- */
+.toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 4px}
+.tcell{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 14px}
+.tcell .th1{font-size:13.5px;font-weight:600;margin-bottom:3px}
+.tcell .th2{font-size:12px;color:var(--ink3);line-height:1.6}
+.khrow{display:flex;align-items:baseline;gap:10px;border-bottom:1px solid var(--line);padding:8px 2px}
+.khrow .kw{font-size:15px;font-weight:600;white-space:nowrap}
+.khrow .kr{font-family:"Charis SIL","Doulos SIL","Gentium Plus","Times New Roman",serif;font-size:12px;color:#534AB7;white-space:nowrap}
+.khrow .kz{font-size:12.5px;color:var(--ink2);margin-left:auto;text-align:right}
+.khrow .knote{font-size:11px;color:var(--ink3);width:100%;line-height:1.55;border-bottom:none}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="trow">
+    <div class="tname">柬埔寨 7 天<span>口语手册</span></div>
+    <button class="chip" id="ivBtn" type="button">只看采访</button>
+  </div>
+  <div class="days" id="days"></div>
+</header>
+
+<main id="main"></main>
+
+<div class="pbar">
+  <button class="pb" id="slowBtn" type="button">慢速</button>
+  <span class="pcount" id="pcount"></span>
+</div>
+
+<script src="audio-map.js"></script>
+<script>
+var DAYS = [
+  {
+    d:"D1", place:"金边", theme:"落地 · 入境 · 第一次开口",
+    date:"第 1 天",
+    mustNote:"落地到晚上，你只需要这六句。边检那两句答完就过，别多说。",
+    must:[
+      {en:"<b>Tour</b>ism — <b>sev</b>en <b>days</b>.", zh:"旅游，七天。"},
+      {en:"I'm <b>stay</b>ing at the Champs Elysees Hotel.", zh:"我住 Champs Elysees 酒店。"},
+      {en:"<b>How</b> much is a <b>tax</b>i to the <b>ci</b>ty?", zh:"打车去市区多少钱？"},
+      {en:"<b>Three</b> dollars — o<b>kay</b>?", zh:"三块，行吗？"},
+      {en:"I have a <b>book</b>ing under the name …", zh:"我有一个预订，名字是……"},
+      {en:"Could you <b>write</b> the ad<b>dress</b> in <b>Khmer</b>?", zh:"能写成高棉文吗？"}
+    ],
+    blocks:[
+      { t:"12:00", w:"机上 · 入境卡", note:"<b>落地前最后一件事。</b>入境卡在飞机上发，落地再要就来不及。名字按护照写，别用中文。", items:[
+        {en:"Could I have an <b>ar</b>rival card, please?", ipa:"/kʊd aɪ hæv ən əˈraɪvl kɑːd pliːz/", zh:"可以给我一张入境卡吗？", tag:"入境"},
+        {en:"Do I <b>need</b> to <b>fill</b> this in for the <b>vi</b>sa as well?", ipa:"/duː aɪ niːd tə fɪl ðɪs ɪn fə ðə ˈviːzə əz wel/", zh:"签证那部分也要填吗？", tag:"入境"}
+      ]},
+      { t:"12:30", w:"德乔机场 · 边检与到达", note:"边检只会问三件事：待几天、住哪、来做什么。<b>答完就过，多说反而招问。</b>", items:[
+        {en:"<b>Tour</b>ism — <b>sev</b>en <b>days</b>.", ipa:"/ˈtʊərɪzəm | ˈsevn ˈdeɪz/", zh:"旅游，七天。", tag:"入境"},
+        {en:"I'm <b>stay</b>ing at the Champs Elysees Hotel in Phnom Penh.", ipa:"/aɪm ˈsteɪɪŋ ət ðə ʃɒmz eɪliˈzeɪ həʊˈtel ɪn pəˈnɒm pen/", zh:"我住金边的 Champs Elysees 酒店。", tag:"入境"},
+        {en:"Where do I <b>pick</b> up my <b>lug</b>gage?", ipa:"/weə duː aɪ ˈpɪk ʌp maɪ ˈlʌɡɪdʒ/", zh:"在哪儿取行李？", tag:"入境"},
+        {en:"Can I get a <b>SIM</b> card here? A <b>week</b> of <b>da</b>ta.", ipa:"/kən aɪ ɡet ə ˈsɪm kɑːd hɪə | ə ˈwiːk əv ˈdeɪtə/", zh:"这儿能买电话卡吗？要一周的流量。", tag:"入境"},
+        {en:"<b>Small</b> <b>notes</b>, please — I need them for the <b>tuk</b>-tuk.", ipa:"/smɔːl ˈnəʊts pliːz | aɪ niːd ðəm fə ðə ˈtʊk tʊk/", zh:"麻烦给小面额的——打车要用。", tag:"换钱"}
+      ]},
+      { t:"13:05", w:"机场出口 · 去酒店", items:[
+        {en:"Please <b>take</b> me to this ad<b>dress</b> — it's in <b>Khmer</b>.", ipa:"/pliːz ˈteɪk miː tə ðɪs əˈdres | ɪts ɪn ˈkmeə/", zh:"请送我去这个地址——是高棉文写的。", tag:"交通"},
+        {en:"<b>How</b> much is a <b>tax</b>i to the <b>ci</b>ty?", ipa:"/haʊ ˈmʌtʃ ɪz ə ˈtæksi tə ðə ˈsɪti/", zh:"打车去市区多少钱？", tag:"交通"},
+        {en:"Is that <b>one</b> way or <b>round</b> trip?", ipa:"/ɪz ðæt ˈwʌn ˈweɪ ɔː ˈraʊnd ˈtrɪp/", zh:"这是单程还是往返？", tag:"交通"},
+        {en:"<b>Three</b> dollars — o<b>kay</b>?", ipa:"/ˈθriː ˈdɒləz | əʊˈkeɪ/", zh:"三块，行吗？", tag:"交通"}
+      ]},
+      { t:"13:30", w:"Champs Elysees Hotel · 入住", note:"入住问清四件事：早餐时间、押金、退房时间、叫车提前多久。最后一个最容易忘。", items:[
+        {en:"I have a <b>book</b>ing under the name …", ipa:"/aɪ hæv ə ˈbʊkɪŋ ˈʌndə ðə ˈneɪm/", zh:"我有一个预订，名字是……", tag:"酒店"},
+        {en:"Is <b>break</b>fast in<b>clu</b>ded? <b>What</b> time?", ipa:"/ɪz ˈbrekfəst ɪnˈkluːdɪd | ˈwɒt ˈtaɪm/", zh:"含早餐吗？几点？", tag:"酒店"},
+        {en:"Do you need a de<b>pos</b>it?", ipa:"/duː juː niːd ə dɪˈpɒzɪt/", zh:"要押金吗？", tag:"酒店"},
+        {en:"<b>How</b> much should a <b>tuk</b>-tuk to <b>Tuol Sleng</b> cost?", ipa:"/haʊ ˈmʌtʃ ʃʊd ə ˈtʊk tʊk tə ˈtuəl ˈsleŋ kɒst/", zh:"去吐斯廉打突突车一般多少钱？", tag:"酒店"},
+        {en:"Could you <b>write</b> the ad<b>dress</b> in <b>Khmer</b> for me?", ipa:"/kʊd juː ˈraɪt ði əˈdres ɪn ˈkmeə fə miː/", zh:"能帮我把地址写成高棉文吗？", tag:"酒店"},
+        {en:"What's the <b>Wi</b>-Fi <b>pass</b>word?", ipa:"/wɒts ðə ˈwaɪfaɪ ˈpɑːswɜːd/", zh:"Wi-Fi 密码是多少？", tag:"酒店"}
+      ]},
+      { t:"14:20", w:"S-21 吐斯廉博物馆 · 售票与馆内", note:"门票 $5，语音导览另加 $3。<b>中文导览不一定有</b>，先问，没有就要英文的——没有解说的 S-21 差很多。", items:[
+        {en:"<b>Two</b> tick<b>ets</b>, please.", ipa:"/ˈtuː ˈtɪkɪts pliːz/", zh:"两张票。", tag:"门票"},
+        {en:"Do you have an <b>au</b>dio guide in Chi<b>nese</b>?", ipa:"/duː juː hæv ən ˈɔːdiəʊ ɡaɪd ɪn tʃaɪˈniːz/", zh:"有中文语音导览吗？", tag:"门票"},
+        {en:"<b>How</b> long does it <b>take</b> to go <b>round</b>?", ipa:"/haʊ ˈlɒŋ dʌz ɪt ˈteɪk tə ɡəʊ ˈraʊnd/", zh:"逛一圈大概要多久？", tag:"门票"},
+        {en:"Is <b>pho</b>tography a<b>llowed</b> in here?", ipa:"/ɪz fəˈtɒɡrəfi əˈlaʊd ɪn hɪə/", zh:"这里可以拍照吗？", tag:"门票"},
+        {en:"Can I <b>film</b> in this <b>room</b>?", ipa:"/kən aɪ ˈfɪlm ɪn ðɪs ˈruːm/", zh:"这个厅可以录像吗？", tag:"门票"}
+      ]},
+      { t:"15:30", w:"S-21 · 一场对话", note:"这里的采访只有一个原则：<b>先问感受，再问原因</b>。跳过中间一级，得到的是他以为你想听的答案。", iv:true, items:[
+        {en:"<b>Sor</b>ry to <b>both</b>er you — do you have <b>two</b> <b>min</b>utes?", ipa:"/ˈsɒri tə ˈbɒðə juː | duː juː hæv ˈtuː ˈmɪnɪts/", zh:"不好意思打扰一下——能占用你两分钟吗？", tag:"采访", iv:true},
+        {en:"Did your <b>fam</b>ily <b>talk</b> about it when you were a <b>child</b>?", ipa:"/dɪd jɔː ˈfæməli ˈtɔːk əˈbaʊt ɪt wen juː wər ə ˈtʃaɪld/", zh:"你小时候家里会提这件事吗？", tag:"采访", iv:true},
+        {en:"How <b>old</b> were you <b>then</b>?", ipa:"/haʊ ˈəʊld wə juː ˈðen/", zh:"那时候你多大？", tag:"采访", iv:true},
+        {en:"Do <b>young</b> <b>peo</b>ple <b>know</b> what <b>hap</b>pened here?", ipa:"/duː ˈjʌŋ ˈpiːpl ˈnəʊ wɒt ˈhæpənd hɪə/", zh:"年轻人知道这里发生过什么吗？", tag:"采访", iv:true}
+      ]},
+      { t:"16:40", w:"独立纪念碑 · 等车与街头拍摄", note:"<b>被要求删视频时的标准动作：</b>态度先给足，删得痛快。十次里有七次，对方会说「没事，你留着吧」。", items:[
+        {en:"Can you <b>wait</b> for me here? About <b>for</b>ty <b>min</b>utes.", ipa:"/kən juː ˈweɪt fə miː hɪə | əˈbaʊt ˈfɔːti ˈmɪnɪts/", zh:"能在这儿等我吗？大概四十分钟。", tag:"交通"},
+        {en:"I'm just <b>tak</b>ing some <b>vi</b>deos for my<b>self</b>. Not for TV.", ipa:"/aɪm dʒʌst ˈteɪkɪŋ səm ˈvɪdiəʊz fə maɪˈself | nɒt fə ˈtiːˈviː/", zh:"我就是自己拍着玩，不是电视台的。", tag:"拍摄"},
+        {en:"Is it okay if I <b>film</b> around <b>here</b>?", ipa:"/ɪz ɪt ˈəʊkeɪ ɪf aɪ ˈfɪlm əˈraʊnd hɪə/", zh:"在这附近拍可以吗？", tag:"拍摄"},
+        {en:"Of <b>course</b> — I'll <b>de</b>lete it right now.", ipa:"/əv ˈkɔːs | aɪl dɪˈliːt ɪt ˈraɪt naʊ/", zh:"当然——我马上删。", tag:"拍摄"},
+        {en:"<b>Keep</b> the <b>change</b>.", ipa:"/kiːp ðə ˈtʃeɪndʒ/", zh:"零钱不用找了。", tag:"交通"}
+      ]},
+      { t:"18:30", w:"金边夜市 · 吃的与聊的", note:"夜市是第一天最自然的开口场合：<b>先点单，再闲聊</b>。手里有东西吃的时候，没人会拒绝回答问题。", items:[
+        {en:"A <b>ta</b>ble for <b>one</b>, please.", ipa:"/ə ˈteɪbl fə ˈwʌn pliːz/", zh:"一位。", tag:"餐饮"},
+        {en:"<b>What</b> do you recom<b>mend</b>?", ipa:"/ˈwɒt duː juː ˌrekəˈmend/", zh:"你推荐什么？", tag:"餐饮"},
+        {en:"<b>What's</b> this <b>called</b> in <b>Khmer</b>?", ipa:"/wɒts ðɪs ˈkɔːld ɪn ˈkmeə/", zh:"这个高棉语叫什么？", tag:"餐饮"},
+        {en:"<b>How</b> much is <b>this</b>?", ipa:"/haʊ ˈmʌtʃ ɪz ðɪs/", zh:"这个多少钱？", tag:"餐饮"},
+        {en:"<b>Just</b> this <b>one</b>, thanks.", ipa:"/dʒʌst ðɪs ˈwʌn θæŋks/", zh:"就要这个，谢谢。", tag:"餐饮"}
+      ]}
+    ]
+  },
+  {
+    d:"D2", place:"金边", theme:"王宫 · 博物馆 · PSE · 中央市场",
+    date:"第 2 天",
+    mustNote:"今天两件硬事：王宫着装别被拦，PSE 别走空。这六句背熟就稳。",
+    must:[
+      {en:"Is this o<b>kay</b> to <b>wear</b>?", zh:"这样穿可以吗？"},
+      {en:"Does it <b>close</b> at <b>lunch</b>time?", zh:"中午会闭馆吗？"},
+      {en:"I have an ap<b>point</b>ment at the PSE center.", zh:"我和 PSE 中心有约。"},
+      {en:"My name is … — I e<b>mail</b>ed last week.", zh:"我是……——上周发过邮件。"},
+      {en:"Was this the <b>same</b> price ten years ago?", zh:"十年前也是这个价吗？"},
+      {en:"How has this <b>neigh</b>borhood changed?", zh:"这一带这些年变了吗？"}
+    ],
+    blocks:[
+      { t:"08:00", w:"酒店早餐", items:[
+        {en:"Is the <b>buf</b>fet still <b>o</b>pen?", ipa:"/ɪz ðə ˈbʊfeɪ stɪl ˈəʊpən/", zh:"自助餐还开着吗？", tag:"餐饮"},
+        {en:"Could I have some <b>hot</b> <b>wa</b>ter, please?", ipa:"/kʊd aɪ hæv səm ˈhɒt ˈwɔːtə pliːz/", zh:"能给我一些热水吗？", tag:"餐饮"}
+      ]},
+      { t:"09:00", w:"王宫 · 银殿", note:"<b>上衣必须有袖，裤裙过膝。</b>门口一般可以借或租披肩，一件两三千瑞尔。", items:[
+        {en:"One <b>tick</b>et, please.", ipa:"/wʌn ˈtɪkɪt pliːz/", zh:"一张票。", tag:"门票"},
+        {en:"Is this o<b>kay</b> to <b>wear</b>?", ipa:"/ɪz ðɪs əʊˈkeɪ tə ˈweə/", zh:"这样穿可以吗？", tag:"门票"},
+        {en:"Do you have a <b>scarf</b> I could <b>bor</b>row?", ipa:"/duː juː hæv ə ˈskɑːf aɪ kʊd ˈbɒrəʊ/", zh:"能借我一条披肩吗？", tag:"门票"},
+        {en:"<b>How</b> long does it <b>take</b> to go <b>round</b>?", ipa:"/haʊ ˈlɒŋ dʌz ɪt ˈteɪk tə ɡəʊ ˈraʊnd/", zh:"逛一圈大概要多久？", tag:"门票"},
+        {en:"Is <b>pho</b>tography a<b>llowed</b> in here?", ipa:"/ɪz fəˈtɒɡrəfi əˈlaʊd ɪn hɪə/", zh:"这里可以拍照吗？", tag:"门票"}
+      ]},
+      { t:"11:00", w:"国家博物馆", note:"<b>王宫和博物馆中午都有一段闭馆时间。</b>进门先问，别出门才发现。", items:[
+        {en:"Do you have an <b>au</b>dio guide in Chi<b>nese</b>?", ipa:"/duː juː hæv ən ˈɔːdiəʊ ɡaɪd ɪn tʃaɪˈniːz/", zh:"有中文语音导览吗？", tag:"门票"},
+        {en:"Does it <b>close</b> at <b>lunch</b>time?", ipa:"/dʌz ɪt ˈkləʊz ət ˈlʌntʃtaɪm/", zh:"中午会闭馆吗？", tag:"门票"},
+        {en:"Can I <b>film</b> in this <b>room</b>?", ipa:"/kən aɪ ˈfɪlm ɪn ðɪs ˈruːm/", zh:"这个厅可以录像吗？", tag:"门票"}
+      ]},
+      { t:"13:30", w:"PSE Welcome Center（需预约）", note:"<b>先报身份，再提预约。</b>这里的人天天接待访客，说清来意，他们会安排能聊的人。", iv:true, items:[
+        {en:"I have an ap<b>point</b>ment at the PSE center.", ipa:"/aɪ hæv ən əˈpɔɪntmənt ət ðə ˌpiː es ˈiː ˈsentə/", zh:"我和 PSE 中心有约。", tag:"交通"},
+        {en:"My name is … — I e<b>mail</b>ed last week.", ipa:"/maɪ ˈneɪm ɪz | aɪ ˈiːmeɪld lɑːst ˈwiːk/", zh:"我是……——上周发过邮件。", tag:"采访", iv:true},
+        {en:"Could I <b>speak</b> to someone who <b>works</b> here?", ipa:"/kʊd aɪ spiːk tə ˈsʌmwʌn huː wɜːks hɪə/", zh:"能找一位在这里工作的人聊聊吗？", tag:"采访", iv:true},
+        {en:"Where do most of the <b>stu</b>dents come from?", ipa:"/weə duː məʊst əv ðə ˈstjuːdnts kʌm frɒm/", zh:"学生主要来自哪里？", tag:"采访", iv:true},
+        {en:"What do they want to do after<b>wards</b>?", ipa:"/ˈwɒt duː ðeɪ ˈwɒnt tə duː ˈɑːftəwədz/", zh:"他们之后想做什么？", tag:"采访", iv:true},
+        {en:"How has this <b>neigh</b>borhood changed?", ipa:"/haʊ hæz ðɪs ˈneɪbəhʊd ˈtʃeɪndʒd/", zh:"这一带这些年变了吗？", tag:"采访", iv:true}
+      ]},
+      { t:"15:30", w:"去程车上 · 问司机（顺路验证）", iv:true, note:"<b>司机是免费的信息源。</b>PSE 怎么去、那一片什么样，问两个司机对一下答案。", items:[
+        {en:"Do you <b>know</b> where the PSE center is?", ipa:"/duː juː ˈnəʊ weə ðə ˌpiː es ˈiː ˈsentə ɪz/", zh:"你知道 PSE 中心在哪儿吗？", tag:"采访", iv:true},
+        {en:"<b>What's</b> that <b>area</b> like now?", ipa:"/ˈwɒts ðæt ˈeəriə ˈlaɪk naʊ/", zh:"那一带现在什么样？", tag:"采访", iv:true}
+      ]},
+      { t:"16:30", w:"中央市场 · 塔山寺", items:[
+        {en:"<b>How</b> much is <b>this</b>?", ipa:"/haʊ ˈmʌtʃ ɪz ðɪs/", zh:"这个多少钱？", tag:"市场"},
+        {en:"Can I <b>try</b> one?", ipa:"/kən aɪ ˈtraɪ wʌn/", zh:"能尝一个吗？", tag:"市场"},
+        {en:"<b>What's</b> this <b>called</b> in <b>Khmer</b>?", ipa:"/ˈwɒts ðɪs ˈkɔːld ɪn ˈkmeə/", zh:"这个高棉语叫什么？", tag:"市场"},
+        {en:"<b>How</b> long have you had this <b>stall</b>?", ipa:"/haʊ ˈlɒŋ hæv juː hæd ðɪs ˈstɔːl/", zh:"这个摊子你摆多久了？", tag:"采访", iv:true},
+        {en:"Was this the <b>same</b> price ten years ago?", ipa:"/wəz ðɪs ðə ˈseɪm ˈpraɪs ten ˈjɪəz əˈɡəʊ/", zh:"十年前也是这个价吗？", tag:"采访", iv:true},
+        {en:"Has the <b>rent</b> gone <b>up</b>?", ipa:"/hæz ðə ˈrent ɡɒn ˈʌp/", zh:"摊位租金涨了吗？", tag:"采访", iv:true}
+      ]},
+      { t:"18:00", w:"邮政局 · 莱佛士一带 · 夜景", items:[
+        {en:"Is it o<b>kay</b> if I <b>film</b> around <b>here</b>?", ipa:"/ɪz ɪt ˌəʊˈkeɪ ɪf aɪ ˈfɪlm əˈraʊnd hɪə/", zh:"在这附近拍可以吗？", tag:"拍摄"},
+        {en:"<b>What</b> time do the <b>lights</b> come on?", ipa:"/ˈwɒt ˈtaɪm duː ðə ˈlaɪts kʌm ɒn/", zh:"灯几点亮？", tag:"拍摄"},
+        {en:"Where's a good <b>spot</b> for <b>sun</b>set?", ipa:"/weəz ə ɡʊd ˈspɒt fə ˈsʌnset/", zh:"看日落哪里位置好？", tag:"拍摄"}
+      ]}
+    ]
+  },
+  {
+    d:"D3", place:"西港", theme:"陆路四小时 · 车上采访 · 到埠",
+    date:"第 3 天",
+    mustNote:"今天是采访最密的一天。巴士上那四个小时别睡过去——<b>同一句话，换个座位再问一遍</b>，答案对不上，才是真线索。",
+    must:[
+      {en:"Is this the <b>bus</b> to Si<b>ha</b>noukville?", zh:"这是去西港的车吗？"},
+      {en:"<b>What</b> time does it ar<b>rive</b>?", zh:"几点能到？"},
+      {en:"Ex<b>cuse</b> me — are you from <b>round</b> here?", zh:"打扰一下——你是本地人吗？"},
+      {en:"What's the <b>hard</b>est year you re<b>mem</b>ber?", zh:"你记得最难的是哪一年？"},
+      {en:"How is it <b>dif</b>ferent from ten years ago?", zh:"跟十年前比，哪儿不一样？"},
+      {en:"<b>How</b> much to the Inde<b>pend</b>ence Hotel?", zh:"到独立酒店多少钱？"}
+    ],
+    blocks:[
+      { t:"06:30", w:"酒店退房 · 去车站", items:[
+        {en:"I'm checking out — could you <b>call</b> a <b>tuk</b>-tuk for me?", ipa:"/aɪm ˈtʃekɪŋ aʊt | kʊd juː ˈkɔːl ə ˈtʊk tʊk fə miː/", zh:"我退房了——能帮我叫辆突突车吗？", tag:"酒店"},
+        {en:"To the <b>Giant</b> Ibis station, please.", ipa:"/tə ðə ˈdʒaɪənt ˈaɪbɪs ˈsteɪʃn pliːz/", zh:"去 Giant Ibis 车站。", tag:"交通"},
+        {en:"<b>How</b> long should a <b>tuk</b>-tuk to the <b>sta</b>tion take?", ipa:"/haʊ ˈlɒŋ ʃʊd ə ˈtʊk tʊk tə ðə ˈsteɪʃn ˈteɪk/", zh:"到车站大概要多久？", tag:"交通"}
+      ]},
+      { t:"07:10", w:"金边车站 · 买票上车", items:[
+        {en:"<b>One</b> tick<b>et</b> to Si<b>ha</b>noukville, please.", ipa:"/wʌn ˈtɪkɪt tə sɪˌnɑːnʊkˈvɪl pliːz/", zh:"一张去西港的票。", tag:"城际"},
+        {en:"<b>What</b> time does it ar<b>rive</b>?", ipa:"/ˈwɒt ˈtaɪm dʌz ɪt əˈraɪv/", zh:"几点能到？", tag:"城际"},
+        {en:"Does it <b>stop</b> for <b>food</b>?", ipa:"/dʌz ɪt ˈstɒp fə ˈfuːd/", zh:"中途会停下来吃饭吗？", tag:"城际"},
+        {en:"Is there a <b>toi</b>let on <b>board</b>?", ipa:"/ɪz ðeər ə ˈtɔɪlət ɒn ˈbɔːd/", zh:"车上有厕所吗？", tag:"城际"},
+        {en:"Where do I <b>put</b> my <b>bag</b>?", ipa:"/weə duː aɪ ˈpʊt maɪ ˈbæɡ/", zh:"包放哪儿？", tag:"城际"}
+      ]},
+      { t:"08:00–12:00", w:"四小时巴士 · 递进式采访", iv:true, note:"<b>别一上来就问那些楼。</b>顺序：破冰 → 西港变化 → 那些楼 → 认识的人。一个问题问两三个人，答案对不上的地方才值钱。对方不接话，就换下一个。", items:[
+        {en:"Ex<b>cuse</b> me — are you from <b>round</b> here?", ipa:"/ɪksˈkjuːz miː | ɑː juː frɒm ˈraʊnd hɪə/", zh:"打扰一下——你是本地人吗？", tag:"采访", iv:true},
+        {en:"Do you <b>take</b> this <b>bus</b> often?", ipa:"/duː juː ˈteɪk ðɪs ˈbʌs ˈɒfn/", zh:"你常坐这趟车吗？", tag:"采访", iv:true},
+        {en:"What's the <b>hard</b>est year you re<b>mem</b>ber?", ipa:"/ˈwɒts ðə ˈhɑːdɪst ˈjɪə juː rɪˈmembə/", zh:"你记得最难的是哪一年？", tag:"采访", iv:true},
+        {en:"How is it <b>dif</b>ferent from ten years ago?", ipa:"/haʊ ɪz ɪt ˈdɪfrənt frɒm ten ˈjɪəz əˈɡəʊ/", zh:"跟十年前比，哪儿不一样？", tag:"采访", iv:true},
+        {en:"<b>Peo</b>ple say the <b>buil</b>dings went up <b>fast</b>. Is that right?", ipa:"/ˈpiːpl ˈseɪ ðə ˈbɪldɪŋz went ʌp ˈfɑːst | ɪz ðæt ˈraɪt/", zh:"都说那些楼盖得很快，是这样吗？", tag:"采访", iv:true},
+        {en:"Do you <b>know</b> anyone who used to <b>work</b> in those buildings?", ipa:"/duː juː ˈnəʊ ˈeniwʌn huː ˈjuːst tə ˈwɜːk ɪn ðəʊz ˈbɪldɪŋz/", zh:"你认识以前在那些楼里上班的人吗？", tag:"采访", iv:true},
+        {en:"<b>What</b> do people around you <b>say</b> about it?", ipa:"/ˈwɒt duː ˈpiːpl əˈraʊnd juː ˈseɪ əˈbaʊt ɪt/", zh:"你周围的人怎么看这件事？", tag:"采访", iv:true}
+      ]},
+      { t:"12:30", w:"西港车站 · 打车去酒店", items:[
+        {en:"<b>How</b> much to the Inde<b>pend</b>ence Hotel?", ipa:"/haʊ ˈmʌtʃ tə ði ˌɪndɪˈpendəns həʊˈtel/", zh:"到独立酒店多少钱？", tag:"交通"},
+        {en:"Please <b>take</b> me to this ad<b>dress</b> — it's in <b>Khmer</b>.", ipa:"/pliːz ˈteɪk miː tə ðɪs əˈdres | ɪts ɪn ˈkmeə/", zh:"请送我去这个地址——是高棉文写的。", tag:"交通"}
+      ]},
+      { t:"13:30", w:"独立酒店 · 入住放包", items:[
+        {en:"I have a <b>book</b>ing under the name …", ipa:"/aɪ hæv ə ˈbʊkɪŋ ˈʌndə ðə ˈneɪm/", zh:"我有一个预订，名字是……", tag:"酒店"},
+        {en:"<b>What</b> time is <b>break</b>fast?", ipa:"/ˈwɒt ˈtaɪm ɪz ˈbrekfəst/", zh:"早餐几点？", tag:"酒店"},
+        {en:"Could you <b>keep</b> my <b>bag</b>? I'm going out.", ipa:"/kʊd juː kiːp maɪ ˈbæɡ | aɪm ˈɡəʊɪŋ aʊt/", zh:"能帮我存一下包吗？我出去一趟。", tag:"酒店"}
+      ]},
+      { t:"15:00", w:"双狮转盘 · Ochheuteal 海滩", items:[
+        {en:"Is it <b>safe</b> to <b>swim</b> here?", ipa:"/ɪz ɪt ˈseɪf tə ˈswɪm hɪə/", zh:"这儿游泳安全吗？", tag:"应急"},
+        {en:"<b>How</b> much to <b>Ot</b>res beach?", ipa:"/haʊ ˈmʌtʃ tə ˈəʊtrez biːtʃ/", zh:"去 Otres 海滩多少钱？", tag:"交通"},
+        {en:"<b>How</b> long will you <b>wait</b>?", ipa:"/haʊ ˈlɒŋ wɪl juː ˈweɪt/", zh:"你愿意等多久？", tag:"交通"}
+      ]},
+      { t:"17:30", w:"Otres 中国城一带 · 夜景回程", iv:true, note:"<b>只用过去时。</b>「现在还有没有」会让人闭嘴，「那时候」能讲半小时。对方不接，立刻换闲聊，别追。", items:[
+        {en:"<b>What</b> were those <b>buil</b>dings used for?", ipa:"/ˈwɒt wə ðəʊz ˈbɪldɪŋz ˈjuːzd fɔː/", zh:"那些楼以前是做什么用的？", tag:"采访", iv:true},
+        {en:"Do people from this <b>area</b> <b>work</b> there?", ipa:"/duː ˈpiːpl frɒm ðɪs ˈeəriə ˈwɜːk ðeə/", zh:"这一带有人在那儿上班吗？", tag:"采访", iv:true},
+        {en:"<b>What</b> happened to the Chinese shops that used to be here?", ipa:"/ˈwɒt ˈhæpənd tə ðə tʃaɪˈniːz ʃɒps ðæt ˈjuːst tə biː hɪə/", zh:"以前那些中国店后来怎么样了？", tag:"采访", iv:true},
+        {en:"That's fine — let's <b>skip</b> it.", ipa:"/ðæts ˈfaɪn | lets ˈskɪp ɪt/", zh:"没关系——这个跳过。", tag:"采访", iv:true}
+      ]}
+    ]
+  },
+  {
+    d:"D4", place:"西港", theme:"包车半天 · Ekareach · 两座寺庙",
+    date:"第 4 天",
+    mustNote:"包车谈价就三句：<b>半天价、含不含等、每个点停多久</b>。谈好再上车，上车再谈就晚了。",
+    must:[
+      {en:"<b>How</b> much for <b>half</b> a day?", zh:"包半天多少钱？"},
+      {en:"Does that in<b>clude</b> <b>wait</b>ing?", zh:"含等我的时间吗？"},
+      {en:"Can you <b>wait</b> for me at <b>each</b> stop?", zh:"每个点都能等我吗？"},
+      {en:"Do I <b>need</b> to take my <b>shoes</b> off?", zh:"要脱鞋吗？"},
+      {en:"Is it okay to <b>pho</b>tograph the <b>monks</b>?", zh:"拍僧人可以吗？"},
+      {en:"Could you <b>stop</b> here, at the <b>cor</b>ner?", zh:"能停在路口吗？"}
+    ],
+    blocks:[
+      { t:"09:00", w:"酒店门口 · 包车谈价", note:"<b>先问价，再还一次，就一次。</b>还两次以上对方会不高兴。谈好写进手机给他看。", items:[
+        {en:"<b>How</b> much for <b>half</b> a day? <b>Four</b> hours, <b>three</b> stops.", ipa:"/haʊ ˈmʌtʃ fə ˈhɑːf ə ˈdeɪ | ˈfɔː ˈaʊəz | ˈθriː ˈstɒps/", zh:"包半天多少钱？四个小时，三个点。", tag:"交通"},
+        {en:"Does that in<b>clude</b> <b>wait</b>ing?", ipa:"/dʌz ðæt ɪnˈkluːd ˈweɪtɪŋ/", zh:"含等我的时间吗？", tag:"交通"},
+        {en:"Can you <b>wait</b> for me at <b>each</b> stop?", ipa:"/kən juː ˈweɪt fə miː ət ˈiːtʃ ˈstɒp/", zh:"每个点都能等我吗？", tag:"交通"}
+      ]},
+      { t:"09:30", w:"Phsar Leu 市场", iv:true, items:[
+        {en:"<b>How</b> much for one <b>ki</b>lo?", ipa:"/haʊ ˈmʌtʃ fə wʌn ˈkiːləʊ/", zh:"一公斤多少钱？", tag:"市场"},
+        {en:"Can I <b>try</b> one?", ipa:"/kən aɪ ˈtraɪ wʌn/", zh:"能尝一个吗？", tag:"市场"},
+        {en:"<b>How</b> long have you had this <b>stall</b>?", ipa:"/haʊ ˈlɒŋ hæv juː hæd ðɪs ˈstɔːl/", zh:"这个摊子你摆多久了？", tag:"采访", iv:true},
+        {en:"Do your <b>chil</b>dren want to <b>take</b> over?", ipa:"/duː jɔː ˈtʃɪldrən ˈwɒnt tə ˈteɪk ˈəʊvə/", zh:"孩子愿意接手吗？", tag:"采访", iv:true},
+        {en:"<b>What's</b> this <b>called</b> in <b>Khmer</b>?", ipa:"/ˈwɒts ðɪs ˈkɔːld ɪn ˈkmeə/", zh:"这个高棉语叫什么？", tag:"市场"}
+      ]},
+      { t:"10:30", w:"Ekareach 主路 · 赌场一带（车上）", iv:true, note:"<b>这一段是 D4 最值钱的对话。</b>全部用过去时，只问「以前」。他在开车，答得短是正常的，别催。", items:[
+        {en:"Were they <b>here</b> before two <b>thou</b>sand nine<b>teen</b>?", ipa:"/wə ðeɪ ˈhɪə bɪˈfɔː tuː ˈθaʊznd ˌnaɪnˈtiːn/", zh:"2019 年之前就有这些楼吗？", tag:"采访", iv:true},
+        {en:"<b>What</b> are those <b>buil</b>dings used for <b>now</b>?", ipa:"/ˈwɒt ɑː ðəʊz ˈbɪldɪŋz ˈjuːzd fə naʊ/", zh:"那些楼现在是做什么用的？", tag:"采访", iv:true},
+        {en:"Do people from this <b>area</b> <b>work</b> there?", ipa:"/duː ˈpiːpl frɒm ðɪs ˈeəriə ˈwɜːk ðeə/", zh:"这一带有人在那儿上班吗？", tag:"采访", iv:true},
+        {en:"Have you ever <b>seen</b> anyone <b>of</b>ficial come and <b>check</b>?", ipa:"/hæv juː ˈevə ˈsiːn ˈeniwʌn əˈfɪʃl kʌm ənd ˈtʃek/", zh:"你见过有官方的人来检查吗？", tag:"采访", iv:true}
+      ]},
+      { t:"11:30", w:"Wat Leu 上寺", note:"<b>寺庙三件事：脱鞋、小声、别碰僧人。</b>女性递东西不能直接递到僧人手里。", items:[
+        {en:"Do I <b>need</b> to take my <b>shoes</b> off?", ipa:"/duː aɪ ˈniːd tə ˈteɪk maɪ ˈʃuːz ɒf/", zh:"要脱鞋吗？", tag:"门票"},
+        {en:"<b>Where</b> should I <b>leave</b> my shoes?", ipa:"/ˈweə ʃʊd aɪ ˈliːv maɪ ˈʃuːz/", zh:"鞋放哪儿？", tag:"门票"},
+        {en:"Is it okay to <b>pho</b>tograph the <b>monks</b>?", ipa:"/ɪz ɪt ˌəʊˈkeɪ tə ˈfəʊtəɡrɑːf ðə ˈmʌŋks/", zh:"拍僧人可以吗？", tag:"门票"},
+        {en:"<b>How</b> many people come here <b>each</b> day?", ipa:"/haʊ ˈmeni ˈpiːpl kʌm hɪə ˈiːtʃ ˈdeɪ/", zh:"这里每天来多少人？", tag:"采访", iv:true},
+        {en:"Do <b>young</b> people still <b>come</b>?", ipa:"/duː ˈjʌŋ ˈpiːpl stɪl ˈkʌm/", zh:"年轻人还会来吗？", tag:"采访", iv:true}
+      ]},
+      { t:"14:30", w:"Golden Casino 外观", items:[
+        {en:"Are <b>vi</b>sitors a<b>llowed</b> in<b>side</b>?", ipa:"/ɑː ˈvɪzɪtəz əˈlaʊd ˌɪnˈsaɪd/", zh:"游客能进去吗？", tag:"门票"},
+        {en:"Is there a <b>dress</b> <b>code</b>?", ipa:"/ɪz ðeər ə ˈdres kəʊd/", zh:"有着装要求吗？", tag:"门票"}
+      ]},
+      { t:"16:00", w:"Victory Hill", iv:true, items:[
+        {en:"Could you <b>stop</b> here, at the <b>cor</b>ner?", ipa:"/kʊd juː ˈstɒp hɪə | ət ðə ˈkɔːnə/", zh:"能停在路口吗？", tag:"交通"},
+        {en:"Which <b>year</b> was the <b>busi</b>est here?", ipa:"/wɪtʃ ˈjɪə wəz ðə ˈbiːzɪst hɪə/", zh:"这里哪一年最热闹？", tag:"采访", iv:true},
+        {en:"Is this <b>area</b> <b>bu</b>sy at <b>night</b>?", ipa:"/ɪz ðɪs ˈeəriə ˈbɪzi ət ˈnaɪt/", zh:"这一片晚上热闹吗？", tag:"采访", iv:true}
+      ]}
+    ]
+  },
+  {
+    d:"D5", place:"西港 → 暹粒", theme:"上午飞 · 下午吴哥三寺",
+    date:"第 5 天",
+    mustNote:"吴哥的票是一日票。<b>下午买票通常能免费进园看日落，票从第二天算</b>——但你的行程今天就要用，直接买当天票。",
+    must:[
+      {en:"One-day <b>pass</b>, please.", zh:"一张一日票。"},
+      {en:"Do I <b>need</b> to <b>show</b> the pass at <b>ev</b>ery temple?", zh:"每个寺都要查票吗？"},
+      {en:"<b>Where</b> does the <b>driv</b>er wait?", zh:"司机在哪儿等？"},
+      {en:"<b>Which</b> way to Ta <b>Prohm</b>?", zh:"塔布隆往哪边走？"},
+      {en:"<b>Where</b> should I <b>leave</b> my shoes?", zh:"鞋放哪儿？"},
+      {en:"Is it okay to <b>pho</b>tograph the <b>monks</b>?", zh:"拍僧人可以吗？"}
+    ],
+    blocks:[
+      { t:"08:30", w:"西港酒店 · 退房与寄存", items:[
+        {en:"I'm checking out — could you <b>keep</b> my <b>bag</b>?", ipa:"/aɪm ˈtʃekɪŋ aʊt | kʊd juː kiːp maɪ ˈbæɡ/", zh:"我退房——能帮我存一下包吗？", tag:"酒店"},
+        {en:"<b>What</b> time should I <b>leave</b> for the airport?", ipa:"/ˈwɒt ˈtaɪm ʃʊd aɪ ˈliːv fə ði ˈeəpɔːt/", zh:"几点出发去机场合适？", tag:"酒店"},
+        {en:"Could you <b>call</b> a <b>tuk</b>-tuk for me?", ipa:"/kʊd juː ˈkɔːl ə ˈtʊk tʊk fə miː/", zh:"能帮我叫辆突突车吗？", tag:"交通"}
+      ]},
+      { t:"09:30", w:"西港机场", items:[
+        {en:"<b>Which</b> ter<b>mi</b>nal is this?", ipa:"/ˈwɪtʃ ˈtɜːmɪnl ɪz ðɪs/", zh:"这是哪个航站楼？", tag:"城际"},
+        {en:"Where's the <b>bag</b>gage <b>drop</b>?", ipa:"/weəz ðə ˈbæɡɪdʒ ˈdrɒp/", zh:"在哪儿托运行李？", tag:"城际"},
+        {en:"Is the <b>flight</b> de<b>layed</b>?", ipa:"/ɪz ðə ˈflaɪt dɪˈleɪd/", zh:"航班延误了吗？", tag:"城际"}
+      ]},
+      { t:"11:30", w:"暹粒 · Khmer Mansion 入住", items:[
+        {en:"I have a <b>book</b>ing under the name …", ipa:"/aɪ hæv ə ˈbʊkɪŋ ˈʌndə ðə ˈneɪm/", zh:"我有一个预订，名字是……", tag:"酒店"},
+        {en:"What's the <b>Wi</b>-Fi <b>pass</b>word?", ipa:"/ˈwɒts ðə ˈwaɪfaɪ ˈpɑːswɜːd/", zh:"Wi-Fi 密码是多少？", tag:"酒店"},
+        {en:"<b>How</b> much should a <b>tuk</b>-tuk to <b>Ang</b>kor Wat cost?", ipa:"/haʊ ˈmʌtʃ ʃʊd ə ˈtʊk tʊk tə ˌæŋkɔː ˈwɒt kɒst/", zh:"去吴哥寺打突突车一般多少钱？", tag:"酒店"}
+      ]},
+      { t:"13:00", w:"吴哥售票处", note:"<b>一日票 $37，当天有效。</b>查票点在园区入口，票要随身，每个寺都可能查。", items:[
+        {en:"One-day <b>pass</b>, please.", ipa:"/ˈwʌn ˈdeɪ ˈpɑːs pliːz/", zh:"一张一日票。", tag:"门票"},
+        {en:"Do I <b>need</b> to <b>show</b> the pass at <b>ev</b>ery temple?", ipa:"/duː aɪ ˈniːd tə ˈʃəʊ ðə ˈpɑːs ət ˈevri ˈtempl/", zh:"每个寺都要查票吗？", tag:"门票"},
+        {en:"If I buy it <b>now</b>, can I <b>use</b> it to<b>mor</b>row?", ipa:"/ɪf aɪ ˈbaɪ ɪt naʊ | kən aɪ ˈjuːz ɪt təˈmɒrəʊ/", zh:"现在买的话，能用明天吗？", tag:"门票"}
+      ]},
+      { t:"13:45", w:"塔布隆寺", items:[
+        {en:"<b>Which</b> way to Ta <b>Prohm</b>?", ipa:"/wɪtʃ ˈweɪ tə tɑː ˈprəʊm/", zh:"塔布隆往哪边走？", tag:"门票"},
+        {en:"<b>Where</b> does the <b>driv</b>er wait?", ipa:"/ˈweə dʌz ðə ˈdraɪvə ˈweɪt/", zh:"司机在哪儿等？", tag:"交通"},
+        {en:"Do I <b>need</b> to take my <b>shoes</b> off?", ipa:"/duː aɪ ˈniːd tə ˈteɪk maɪ ˈʃuːz ɒf/", zh:"要脱鞋吗？", tag:"门票"},
+        {en:"Can you <b>wait</b> for me here? About <b>for</b>ty <b>min</b>utes.", ipa:"/kən juː ˈweɪt fə miː hɪə | əˈbaʊt ˈfɔːti ˈmɪnɪts/", zh:"能在这儿等我吗？大概四十分钟。", tag:"交通"}
+      ]},
+      { t:"15:30", w:"巴戎寺 · 与守寺人聊", iv:true, note:"<b>问守寺人和问导游不一样。</b>守寺人一天站在同一个门洞里，他看见的是人流，不是历史。", items:[
+        {en:"<b>How</b> many people come here <b>each</b> day?", ipa:"/haʊ ˈmeni ˈpiːpl kʌm hɪə ˈiːtʃ ˈdeɪ/", zh:"这里每天来多少人？", tag:"采访", iv:true},
+        {en:"<b>What</b> do people <b>ask</b> you a<b>bout</b> most?", ipa:"/ˈwɒt duː ˈpiːpl ˈɑːsk juː əˈbaʊt ˈməʊst/", zh:"人们最常问你什么？", tag:"采访", iv:true},
+        {en:"Do <b>young</b> people still <b>come</b>?", ipa:"/duː ˈjʌŋ ˈpiːpl stɪl ˈkʌm/", zh:"年轻人还会来吗？", tag:"采访", iv:true}
+      ]},
+      { t:"17:00", w:"吴哥寺 · 日落", items:[
+        {en:"<b>What</b> time is <b>sun</b>set to<b>day</b>?", ipa:"/ˈwɒt ˈtaɪm ɪz ˈsʌnset təˈdeɪ/", zh:"今天日落几点？", tag:"拍摄"},
+        {en:"<b>Which</b> <b>side</b> is best for <b>pho</b>tos?", ipa:"/wɪtʃ ˈsaɪd ɪz ˈbest fə ˈfəʊtəʊz/", zh:"哪一侧拍照最好？", tag:"拍摄"},
+        {en:"Is it o<b>kay</b> if I <b>film</b> around <b>here</b>?", ipa:"/ɪz ɪt ˌəʊˈkeɪ ɪf aɪ ˈfɪlm əˈraʊnd hɪə/", zh:"在这附近拍可以吗？", tag:"拍摄"}
+      ]}
+    ]
+  },
+  {
+    d:"D6", place:"暹粒", theme:"老市场 · 龙舟赛 · 空邦鲁",
+    date:"第 6 天",
+    mustNote:"洞里萨湖的一切都跟水位有关。<b>先问水位，再问鱼，最后问孩子</b>——这是问渔民的三级台阶。",
+    must:[
+      {en:"Is the <b>wa</b>ter <b>low</b> or <b>high</b> now?", zh:"现在水位低还是高？"},
+      {en:"How <b>long</b> is the <b>boat</b> ride?", zh:"坐船要多久？"},
+      {en:"Is the boat <b>fee</b> in<b>clu</b>ded?", zh:"船费含在团里吗？"},
+      {en:"Do the <b>chil</b>dren still go to school by <b>boat</b>?", zh:"孩子们还坐船上学吗？"},
+      {en:"Is there <b>any</b>thing I should have <b>asked</b>?", zh:"有没有我该问但没问的？"},
+      {en:"Or-<b>kun</b>!", zh:"谢谢！（高棉语，见工具箱）"}
+    ],
+    blocks:[
+      { t:"08:00", w:"Phsar Leu · 早餐", items:[
+        {en:"<b>One</b> <b>cof</b>fee, please.", ipa:"/wʌn ˈkɒfi pliːz/", zh:"一杯咖啡。", tag:"餐饮"},
+        {en:"<b>What</b> do you recom<b>mend</b>?", ipa:"/ˈwɒt duː juː ˌrekəˈmend/", zh:"你推荐什么？", tag:"餐饮"},
+        {en:"<b>How</b> much is <b>this</b>?", ipa:"/haʊ ˈmʌtʃ ɪz ðɪs/", zh:"这个多少钱？", tag:"餐饮"}
+      ]},
+      { t:"09:30", w:"皇家花园 · 暹粒河龙舟赛", items:[
+        {en:"<b>When</b> does the <b>race</b> start?", ipa:"/wen dʌz ðə ˈreɪs stɑːt/", zh:"比赛几点开始？", tag:"拍摄"},
+        {en:"Is it o<b>kay</b> if I <b>film</b> the <b>race</b>?", ipa:"/ɪz ɪt ˌəʊˈkeɪ ɪf aɪ ˈfɪlm ðə ˈreɪs/", zh:"拍比赛可以吗？", tag:"拍摄"},
+        {en:"Is this the <b>big</b>gest fes<b>ti</b>val of the year?", ipa:"/ɪz ðɪs ðə ˈbɪɡɪst ˈfestɪvl əv ðə ˈjɪə/", zh:"这是全年最大的节日吗？", tag:"采访", iv:true}
+      ]},
+      { t:"11:00", w:"回酒店 · 确认下午行程", items:[
+        {en:"Could you <b>keep</b> my <b>bag</b> until <b>noon</b>?", ipa:"/kʊd juː kiːp maɪ ˈbæɡ ənˈtɪl ˈnuːn/", zh:"包能存到中午吗？", tag:"酒店"},
+        {en:"<b>What</b> time should I be <b>back</b>?", ipa:"/ˈwɒt ˈtaɪm ʃʊd aɪ biː ˈbæk/", zh:"我几点要回来？", tag:"交通"}
+      ]},
+      { t:"13:30", w:"去空邦鲁的车上 · 问导游", iv:true, note:"<b>去程问安排，回程才问真话。</b>回程车上人都累了，警惕心最低——把最重要的问题留在回程。", items:[
+        {en:"How has the <b>wa</b>ter changed?", ipa:"/haʊ hæz ðə ˈwɔːtə ˈtʃeɪndʒd/", zh:"水有什么变化吗？", tag:"采访", iv:true},
+        {en:"Is the <b>wa</b>ter <b>low</b> or <b>high</b> now?", ipa:"/ɪz ðə ˈwɔːtə ˈləʊ ɔː ˈhaɪ naʊ/", zh:"现在水位低还是高？", tag:"采访", iv:true},
+        {en:"<b>How</b> long have you been a <b>guide</b>?", ipa:"/haʊ ˈlɒŋ hæv juː biːn ə ˈɡaɪd/", zh:"你做导游多久了？", tag:"采访", iv:true},
+        {en:"<b>What</b> about you per<b>son</b>ally?", ipa:"/ˈwɒt əˈbaʊt juː ˈpɜːsənəli/", zh:"那你自己呢？", tag:"采访", iv:true}
+      ]},
+      { t:"15:00", w:"浮村 · 手划船", items:[
+        {en:"<b>Five</b> dollars for the <b>small</b> boat, <b>right</b>?", ipa:"/ˈfaɪv ˈdɒləz fə ðə smɔːl ˈbəʊt | raɪt/", zh:"小船是五块，对吧？", tag:"交通"},
+        {en:"Is the boat <b>fee</b> in<b>clu</b>ded?", ipa:"/ɪz ðə ˈbəʊt ˈfiː ɪnˈkluːdɪd/", zh:"船费含在团里吗？", tag:"交通"},
+        {en:"Can I give <b>some</b>thing to the <b>boat</b>man?", ipa:"/kən aɪ ɡɪv ˈsʌmθɪŋ tə ðə ˈbəʊtmən/", zh:"我能给船夫一点心意吗？", tag:"交通"},
+        {en:"Do the <b>chil</b>dren still go to school by <b>boat</b>?", ipa:"/duː ðə ˈtʃɪldrən stɪl ɡəʊ tə ˈskuːl baɪ ˈbəʊt/", zh:"孩子们还坐船上学吗？", tag:"采访", iv:true},
+        {en:"Do you <b>catch</b> as much as be<b>fore</b>?", ipa:"/duː juː ˈkætʃ əz ˈmʌtʃ əz bɪˈfɔː/", zh:"捕的鱼跟以前一样多吗？", tag:"采访", iv:true}
+      ]},
+      { t:"17:45", w:"洞里萨湖日落 · 回程", iv:true, items:[
+        {en:"Where do most <b>tou</b>rists come from <b>now</b>?", ipa:"/weə duː məʊst ˈtʊərɪsts kʌm frɒm naʊ/", zh:"现在的游客主要从哪儿来？", tag:"采访", iv:true},
+        {en:"Is there <b>any</b>thing I should have <b>asked</b>?", ipa:"/ɪz ðeər ˈeniθɪŋ aɪ ʃʊd hæv ˈɑːskt/", zh:"有没有什么我该问但没问的？", tag:"采访", iv:true},
+        {en:"That's really <b>help</b>ful — thank you for your <b>time</b>.", ipa:"/ðæts ˈriːəli ˈhelpfl | θæŋk juː fə jɔː ˈtaɪm/", zh:"太有用了——谢谢你花时间。", tag:"采访", iv:true}
+      ]}
+    ]
+  },
+  {
+    d:"D7", place:"返程", theme:"暹粒 → 金边 → 武汉",
+    date:"第 7 天",
+    mustNote:"金边只有两个半小时转机。<b>这两句问错，可能误机</b>——先问清楚再出关。",
+    must:[
+      {en:"I'm checking out — could you <b>keep</b> my <b>bag</b>?", zh:"我退房——能存一下包吗？"},
+      {en:"<b>What</b> time should I <b>leave</b> for the airport?", zh:"几点出发去机场合适？"},
+      {en:"Do I <b>need</b> to <b>check</b> in a<b>gain</b>, or go <b>straight</b> to the gate?", zh:"要重新值机，还是直接去登机口？"},
+      {en:"Is my <b>bag</b> checked <b>through</b> to Wuhan?", zh:"行李是直挂到武汉吗？"},
+      {en:"Will I still <b>make</b> my con<b>nec</b>tion?", zh:"我还赶得上转机吗？"},
+      {en:"<b>Which</b> <b>gate</b> for the Wuhan flight?", zh:"武汉的航班在几号口？"}
+    ],
+    blocks:[
+      { t:"10:30", w:"暹粒酒店 · 退房", items:[
+        {en:"I'm checking out — could you <b>keep</b> my <b>bag</b>?", ipa:"/aɪm ˈtʃekɪŋ aʊt | kʊd juː kiːp maɪ ˈbæɡ/", zh:"我退房——能帮我存一下包吗？", tag:"酒店"},
+        {en:"<b>What</b> time should I <b>leave</b> for the airport?", ipa:"/ˈwɒt ˈtaɪm ʃʊd aɪ ˈliːv fə ði ˈeəpɔːt/", zh:"几点出发去机场合适？", tag:"酒店"},
+        {en:"Could you <b>call</b> a <b>tuk</b>-tuk for me?", ipa:"/kʊd juː ˈkɔːl ə ˈtʊk tʊk fə miː/", zh:"能帮我叫辆突突车吗？", tag:"交通"}
+      ]},
+      { t:"11:30", w:"暹粒机场 · 值机", items:[
+        {en:"<b>One</b> bag to <b>check</b>, please.", ipa:"/wʌn ˈbæɡ tə ˈtʃek pliːz/", zh:"托运一件行李。", tag:"城际"},
+        {en:"Can I have an <b>ai</b>sle <b>seat</b>?", ipa:"/kən aɪ hæv ən ˈaɪəl ˈsiːt/", zh:"能给我靠走道的位子吗？", tag:"城际"},
+        {en:"Is the <b>flight</b> on <b>time</b>?", ipa:"/ɪz ðə ˈflaɪt ɒn ˈtaɪm/", zh:"航班准点吗？", tag:"城际"}
+      ]},
+      { t:"12:45", w:"飞行 · 你只需要听懂这些", note:"<b>这段没有你要说的话，全是要听的。</b>听不清就举手让空乘再说一遍。", items:[
+        {en:"Boarding for <b>flight</b> K6 seven one two is now <b>clo</b>sing.", ipa:"/ˈbɔːdɪŋ fə ˈflaɪt | ɪz naʊ ˈkləʊzɪŋ/", zh:"K6712 航班现在登机（即将关闭）。", tag:"听力"},
+        {en:"<b>Fi</b>nal <b>call</b> for Phnom Penh.", ipa:"/ˈfaɪnl ˈkɔːl fə pəˈnɒm pen/", zh:"金边航班最后一次广播。", tag:"听力"},
+        {en:"Please have your <b>pass</b>port <b>o</b>pen at the <b>pho</b>to page.", ipa:"/pliːz hæv jɔː ˈpɑːspɔːt ˈəʊpən ət ðə ˈfəʊtəʊ peɪdʒ/", zh:"请把护照翻到照片页。", tag:"听力"}
+      ]},
+      { t:"13:40", w:"金边 · 转机（只有 2.5 小时）", note:"<b>下了飞机先问这两句，再决定出不出去。</b>走错通道，两个半小时不够重来一次。", items:[
+        {en:"Do I <b>need</b> to <b>check</b> in a<b>gain</b>, or go <b>straight</b> to the gate?", ipa:"/duː aɪ ˈniːd tə ˈtʃek ɪn əˈɡen | ɔː ɡəʊ ˈstreɪt tə ðə ˈɡeɪt/", zh:"要重新值机，还是直接去登机口？", tag:"城际"},
+        {en:"Is my <b>bag</b> checked <b>through</b> to Wuhan?", ipa:"/ɪz maɪ ˈbæɡ tʃeɪkt ˈθruː tə ˈwuːˈhɑːn/", zh:"行李是直挂到武汉吗？", tag:"城际"},
+        {en:"Will I still <b>make</b> my con<b>nec</b>tion?", ipa:"/wɪl aɪ stɪl ˈmeɪk maɪ kəˈnekʃn/", zh:"我还赶得上转机吗？", tag:"城际"},
+        {en:"<b>Which</b> <b>gate</b> for the Wuhan flight?", ipa:"/wɪtʃ ˈɡeɪt fə ðə ˈwuːˈhɑːn ˈflaɪt/", zh:"武汉的航班在几号口？", tag:"城际"},
+        {en:"Where's the <b>near</b>est <b>gate</b> change screen?", ipa:"/weəz ðə ˈnɪərɪst ˈɡeɪt ˈtʃeɪndʒ ˈskriːn/", zh:"最近的登机口显示屏在哪？", tag:"城际"}
+      ]},
+      { t:"16:10", w:"起飞 · 落地武汉", items:[
+        {en:"Where do I <b>col</b>lect my <b>bag</b>?", ipa:"/weə duː aɪ kəˈlekt maɪ ˈbæɡ/", zh:"在哪儿取行李？", tag:"城际"},
+        {en:"<b>Any</b>thing to de<b>clare</b>? — No, nothing.", ipa:"/ˈeniθɪŋ tə dɪˈkleə | nəʊ ˈnʌθɪŋ/", zh:"有要申报的吗？——没有。", tag:"听力"},
+        {en:"That's all — <b>thanks</b>.", ipa:"/ðæts ˈɔːl | θæŋks/", zh:"就这些——谢谢。", tag:"听力"}
+      ]}
+    ]
+  },
+  {
+    d:"工具", place:"工具箱", theme:"高棉语 · 拍摄 · 数字 · 方法",
+    date:"全程可用",
+    tool:true,
+    blocks:[]
+  }
+];
+
+var curDay = 0, onlyIV = false;
+var mainEl = document.getElementById('main');
+var daysEl = document.getElementById('days');
+var LS = {
+  get:function(k){try{return localStorage.getItem(k)}catch(e){return null}},
+  set:function(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+};
+
+/* ---------- 朗读 ---------- */
+var ICON = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H3v6h3l5 4V5z"/><path d="M15.4 8.6a5 5 0 0 1 0 6.8"/></svg>';
+var voices = [];
+var currentAudio = null;
+function loadVoices(){ try{ voices = window.speechSynthesis ? speechSynthesis.getVoices() : []; }catch(e){ voices = []; } }
+function pickVoice(){
+  for(var i=0;i<voices.length;i++){ if(/en[-_]GB/i.test(voices[i].lang)) return voices[i]; }
+  for(var k=0;k<voices.length;k++){ if(/^en/i.test(voices[k].lang)) return voices[k]; }
+  return null;
+}
+function say(text, btn){
+  if(currentAudio){ currentAudio.pause(); currentAudio.currentTime = 0; currentAudio = null; }
+  if(window.speechSynthesis) speechSynthesis.cancel();
+  var on = document.querySelectorAll('.spk.on');
+  for(var i=0;i<on.length;i++) on[i].classList.remove('on');
+  if(btn) btn.classList.add('on');
+  var src = window.AUDIO && AUDIO[text];
+  if(src){
+    var audio = new Audio(src);
+    currentAudio = audio;
+    audio.playbackRate = document.body.classList.contains('slow') ? 0.75 : 1;
+    var done = function(){ if(btn) btn.classList.remove('on'); if(currentAudio === audio) currentAudio = null; };
+    audio.onended = done;
+    audio.onerror = function(){ done(); fallbackSay(text, btn); };
+    var started = audio.play();
+    if(started && started.catch) started.catch(function(){ done(); fallbackSay(text, btn); });
+    return;
+  }
+  fallbackSay(text, btn);
+}
+function fallbackSay(text, btn){
+  if(!('speechSynthesis' in window)) return;
+  var u = new SpeechSynthesisUtterance(text);
+  u.lang = 'en-GB';
+  u.rate = document.body.classList.contains('slow') ? 0.68 : 0.95;
+  var v = pickVoice(); if(v) u.voice = v;
+  var done = function(){ if(btn) btn.classList.remove('on'); };
+  u.onend = done; u.onerror = done;
+  speechSynthesis.speak(u);
+}
+
+/* ---------- 渲染 ---------- */
+function esc(s){ return s; }
+
+function renderDays(){
+  var h = '';
+  DAYS.forEach(function(o, i){
+    var cls = 'd' + (i === curDay ? ' on' : '') + (!o.blocks.length && !o.tool ? ' todo' : '');
+    var label = o.tool ? '工具箱' : o.d + ' ' + o.place;
+    h += '<button class="' + cls + '" data-i="' + i + '" type="button">' + label + '</button>';
+  });
+  daysEl.innerHTML = h;
+}
+
+function countItems(day){
+  var n = 0;
+  day.blocks.forEach(function(b){
+    b.items.forEach(function(it){ if(!onlyIV || it.iv) n++; });
+  });
+  return n;
+}
+
+function renderTool(){
+  var h = '';
+  h += '<div class="note kh"><b>高棉语 10 词，全程只用这一张。</b>采访开口前先来一句，后面的英语才有人听。喇叭按英语近似读，<b>只当字母参考，以罗马音的重音为准</b>。</div>';
+  var KH = [
+    ['Sous-dey','/suːsˈdeɪ/','你好','任何场合通用，进店、上车、搭话都用它'],
+    ['Or-kun','/ɔːˈkʊn/','谢谢','说完整点：Or-kun ch\'ran（非常感谢）'],
+    ['Baaht / Jaa','/bɑːt/ /dʒɑː/','是','男性说 Baaht，女性说 Jaa。尾音下沉更礼貌'],
+    ['Ot-tey','/ɒtˈteɪ/','不是 / 不要','婉拒推销最省事的一个词，笑着摇头一起用'],
+    ['Tay-nee pohn-man?','/təˈniː ˈpɔːnˈmɑːn/','这个多少钱？','比英语管用，摊主秒懂'],
+    ['Ch\'ngay','/ˈtʃŋaɪ/','好吃','饭桌上说，破冰效果第一名'],
+    ['Sbai s\'dey?','/sbɑːj ˈsdeɪ/','你好吗？','回答通常是 s\'bai（挺好的）'],
+    ['Som-toh','/ˈsɒm ˈtoʊ/','不好意思','借过、问路、道歉都用'],
+    ['Lea hoy','/liːə ˈhɔɪ/','再见','走的时候说，比 bye 更近一步'],
+    ['Bpay nang?','/ˈbpaɪ ˈnɑːŋ/','去哪儿？','司机问 Where you go? 时，你也可以用这句先问他']
+  ];
+  h += '<div class="card"><h3>高棉语 10 词</h3><div style="margin-top:6px">';
+  KH.forEach(function(k){
+    h += '<div class="khrow"><span class="kw">' + k[0] + '</span><span class="kr">' + k[1] + '</span><span class="kz">' + k[2] + '</span><span class="knote">' + k[3] + '</span></div>';
+  });
+  h += '</div></div>';
+
+  h += '<div class="bh"><span class="tm">拍摄</span><span class="wh">许可包（全程通用）</span><span class="l"></span></div>';
+  h += '<div class="note"><b>被要求删视频的标准动作：</b>态度先给足，删得痛快。十次里有七次，对方会说「没事，你留着吧」。删完别急着走，先聊两句——气氛反而比删除前更好。</div>';
+  h += '<ul class="list">' +
+    '<li class="u"><div class="ue">I\'m just <b>tak</b>ing some <b>vi</b>deos for my<b>self</b>. Not for TV.</div><div class="ui">/aɪm dʒʌst ˈteɪkɪŋ səm ˈvɪdiəʊz fə maɪˈself | nɒt fə ˌtiːˈviː/</div><div class="uz">我就是自己拍着玩，不是电视台的。</div></li>' +
+    '<li class="u"><div class="ue">Is it okay if I <b>film</b> around <b>here</b>?</div><div class="ui">/ɪz ɪt ˌəʊˈkeɪ ɪf aɪ ˈfɪlm əˈraʊnd hɪə/</div><div class="uz">在这附近拍可以吗？</div></li>' +
+    '<li class="u"><div class="ue">Of <b>course</b> — I\'ll <b>de</b>lete it right now.</div><div class="ui">/əv ˈkɔːs | aɪl dɪˈliːt ɪt ˈraɪt naʊ/</div><div class="uz">当然——我马上删。</div></li>' +
+    '<li class="u"><div class="ue">Is it okay to <b>pho</b>tograph the <b>monks</b>?</div><div class="ui">/ɪz ɪt ˌəʊˈkeɪ tə ˈfəʊtəɡrɑːf ðə ˈmʌŋks/</div><div class="uz">拍僧人可以吗？</div></li>' +
+    '</ul>';
+
+  h += '<div class="bh"><span class="tm">数字</span><span class="wh">钱与数字（听错就是多付钱）</span><span class="l"></span></div>';
+  h += '<div class="card"><h3>三条硬规则</h3><ul>' +
+    '<li><b>4000 瑞尔 = 1 美元。</b>所有报价按这个换算，中间不解释。1 美元以下用瑞尔找零，没有硬币。</li>' +
+    '<li><b>十五 / 五十只差重音。</b>fifTEEN（十五）重音在后，FIFty（五十）在前。听不清就伸手指让对方写。</li>' +
+    '<li><b>one fifty = 1.5，不是 150。</b>价格明显不合理时，就是听错了。听到 five 之后，一定等他说单位（dollars 还是 thousand riel）。</li>' +
+    '</ul></div>';
+
+  h += '<div class="bh"><span class="tm">不用嘴</span><span class="wh">四招比任何一句话都管用</span><span class="l"></span></div>';
+  h += '<div class="toolgrid">' +
+    '<div class="tcell"><div class="th1">① 屏幕转过去</div><div class="th2">地址、订单、价格——说话前先把手机屏幕转给对方看。这个动作能消掉一半语言障碍。</div></div>' +
+    '<div class="tcell"><div class="th1">② 伸手指</div><div class="th2">地图上指、菜单上指、价签上指。指比说快，而且不会说错。</div></div>' +
+    '<div class="tcell"><div class="th1">③ 请对方写</div><div class="th2">数字、地址、时间——「Could you write it down?」一张纸比十句英语可靠。</div></div>' +
+    '<div class="tcell"><div class="th1">④ 沉默三秒</div><div class="th2">问完闭嘴，别补话。沉默是最便宜的追问工具，你一开口，对方就收尾了。</div></div>' +
+    '</div>';
+
+  h += '<div class="bh"><span class="tm">应急</span><span class="wh">最要紧的 8 句（全程备用）</span><span class="l"></span></div>';
+  h += '<div class="note warn"><b>慌的时候长句子全忘</b>——就喊 I need help 两个词。被问来意统一答 Tourism，别提调查、拍摄、采访。</div>';
+  h += '<ul class="list">' +
+    '<li class="u"><div class="ue">I <b>need</b> <b>help</b>.</div><div class="uz">我需要帮助。（两个词，喊出来一定有人停）</div></li>' +
+    '<li class="u"><div class="ue">I need a <b>po</b>lice re<b>port</b> for my in<b>su</b>rance.</div><div class="uz">我需要一份报警记录，保险要用。（不给理由对方可能只做口头登记）</div></li>' +
+    '<li class="u"><div class="ue">I <b>lost</b> my <b>pass</b>port. I need to <b>call</b> my em<b>bass</b>y.</div><div class="uz">护照丢了，我要联系大使馆。</div></li>' +
+    '<li class="u"><div class="ue">A <b>dog</b> <b>bit</b> me. Where can I get a <b>ra</b>bies <b>shot</b>?</div><div class="uz">被狗咬了，哪里能打狂犬疫苗？（破皮要当天处理）</div></li>' +
+    '<li class="u"><div class="ue">I\'m <b>al</b>lergic to pe<b>ni</b>cillin.</div><div class="uz">我对青霉素过敏。</div></li>' +
+    '<li class="u"><div class="ue">Please <b>don\'t</b> <b>keep</b> my <b>pass</b>port over<b>night</b>.</div><div class="uz">请不要把我的护照留到明天。</div></li>' +
+    '<li class="u"><div class="ue">We a<b>greed</b> on <b>five</b> <b>doll</b>ars.</div><div class="uz">我们说好是五块。（陈述，不质问）</div></li>' +
+    '<li class="u"><div class="ue">Can we <b>ask</b> some<b>one</b> to trans<b>late</b>?</div><div class="uz">能找个人帮忙翻译吗？（争执卡住时的降级器）</div></li>' +
+    '</ul>';
+
+  h += '<div class="bh"><span class="tm">用法</span><span class="wh">这份手册怎么用</span><span class="l"></span></div>';
+  h += '<div class="card"><ul>' +
+    '<li><b>早上五分钟。</b>只过当天的「今日必背」六句，其他一概不看。</li>' +
+    '<li><b>白天按场景翻。</b>到了现场才查，别提前背——背了也会忘。</li>' +
+    '<li><b>晚上圈一圈。</b>把今天真实说过的话在脑子里过一遍，明天会顺得多。</li>' +
+    '<li><b>250 句里你会真正说出口的不到 80 句。</b>这不是要背完的书，是备着查的口袋。</li>' +
+    '</ul></div>';
+  return h;
+}
+
+function renderMain(){
+  var day = DAYS[curDay];
+  var total = countItems(day);
+  var scenes = day.blocks.length;
+
+  var h = '<div class="dhead">' +
+    '<div class="dkicker">' + day.date + ' · ' + day.d + '</div>' +
+    '<h1 class="dtitle">' + day.place + '　' + day.theme + '</h1>' +
+    '<div class="dstat"><div>场景 <b>' + scenes + '</b></div><div>句子 <b>' + (day.tool ? '—' : total) + '</b></div>' +
+    '<div>' + (onlyIV ? '已筛：只看采访' : (day.tool ? '工具页' : '按时间顺序')) + '</div></div></div>';
+
+  if(day.tool){
+    h += renderTool();
+    mainEl.innerHTML = h;
+    attachSpeakers();
+    document.getElementById('pcount').textContent = '工具页';
+    return;
+  }
+
+  if(!day.blocks.length){
+    h += '<div class="empty"><div class="e1">这一天是空的</div>' +
+      '<div class="e2">占位——内容在正式版里。</div></div>';
+    mainEl.innerHTML = h;
+    document.getElementById('pcount').textContent = '';
+    return;
+  }
+
+  if(day.must){
+    h += '<div class="must"><h3><span class="mk">今日必背</span>　六句，出发前过一遍</h3>';
+    if(day.mustNote) h += '<p class="mp">' + day.mustNote + '</p>';
+    h += '<ol>';
+    day.must.forEach(function(m){
+      h += '<li><div class="ue">' + m.en + '</div><div class="uz">' + m.zh + '</div></li>';
+    });
+    h += '</ol><div class="endnote">剩下的都是备查——到了现场再翻，不用提前背。</div></div>';
+  }
+
+  day.blocks.forEach(function(b){
+    var items = b.items.filter(function(it){ return !onlyIV || it.iv; });
+    if(!items.length) return;
+    h += '<div class="bh"><span class="tm">' + b.t + '</span><span class="wh">' + b.w + '</span><span class="l"></span></div>';
+    if(b.note && !(onlyIV && !b.iv)) h += '<div class="note' + (b.iv ? ' warn' : '') + '">' + b.note + '</div>';
+    h += '<ul class="list">';
+    items.forEach(function(it){
+      h += '<li class="u' + (it.iv ? ' iv' : '') + '">' +
+        '<div class="ue">' + it.en + '<span class="tag' + (it.iv ? ' iv' : '') + '">' + it.tag + '</span></div>' +
+        '<div class="ui">' + it.ipa + '</div>' +
+        '<div class="uz">' + it.zh + '</div>' +
+        '</li>';
+    });
+    h += '</ul>';
+  });
+
+  mainEl.innerHTML = h;
+  attachSpeakers();
+  document.getElementById('pcount').textContent = total + ' 句';
+}
+
+function attachSpeakers(){
+  var lis = mainEl.querySelectorAll('li.u');
+  for(var i=0;i<lis.length;i++){
+    (function(li){
+      if(li.querySelector('.spk')) return;
+      var ue = li.querySelector('.ue');
+      var b = document.createElement('button');
+      b.type = 'button'; b.className = 'spk'; b.setAttribute('aria-label', '朗读这一句');
+      b.innerHTML = ICON;
+      b.addEventListener('click', function(e){
+        e.preventDefault(); e.stopPropagation();
+        var c = ue.cloneNode(true);
+        var junk = c.querySelectorAll('.tag');
+        for(var k=0;k<junk.length;k++) junk[k].parentNode.removeChild(junk[k]);
+        say(c.textContent.replace(/\s+/g,' ').trim(), b);
+      });
+      li.appendChild(b);
+    })(lis[i]);
+  }
+}
+
+function go(i){
+  curDay = i;
+  renderDays();
+  renderMain();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+daysEl.addEventListener('click', function(e){
+  var b = e.target.closest('.d');
+  if(b) go(parseInt(b.dataset.i, 10));
+});
+
+var ivBtn = document.getElementById('ivBtn');
+ivBtn.addEventListener('click', function(){
+  onlyIV = !onlyIV;
+  ivBtn.classList.toggle('on', onlyIV);
+  ivBtn.textContent = onlyIV ? '只看采访 · 开' : '只看采访';
+  renderMain();
+});
+
+var slowBtn = document.getElementById('slowBtn');
+var slowOn = LS.get('kh-slow') === '1';
+document.body.classList.toggle('slow', slowOn);
+slowBtn.classList.toggle('on', slowOn);
+slowBtn.addEventListener('click', function(){
+  var on = !document.body.classList.contains('slow');
+  document.body.classList.toggle('slow', on);
+  slowBtn.classList.toggle('on', on);
+  LS.set('kh-slow', on ? '1' : '0');
+});
+
+document.addEventListener('visibilitychange', function(){
+  if(document.hidden){
+    if(currentAudio){ currentAudio.pause(); currentAudio = null; }
+    if(window.speechSynthesis) speechSynthesis.cancel();
+    var on = document.querySelectorAll('.spk.on');
+    for(var i=0;i<on.length;i++) on[i].classList.remove('on');
+  }
+});
+
+renderDays();
+renderMain();
+loadVoices();
+if(window.speechSynthesis) speechSynthesis.onvoiceschanged = loadVoices;
+</script>
+</body>
+</html>
