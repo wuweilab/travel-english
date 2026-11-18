@@ -4,4 +4,4 @@
 
 网页内嵌 MP3 音频。音频由 Windows 英语语音合成生成，手机无需安装英语语音包。首次打开需要联网加载网页。
 
-网站：GitHub Pages 部署后填写。
+在线网页：https://wuweilab.github.io/travel-english/
